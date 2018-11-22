@@ -1,6 +1,19 @@
 $(document).on('click', '#home', function () {
-    window.alert('homeTest');
+    let url = '/';
+    $.ajax(url, {
+        type: 'GET',
+        success: function (file) {
+            document.open("text/html",'self');
+            document.write(file);
+            document.close();
+        },
+        error: function(file) {
+            window.alert('failed to load index.html');
+        }
+    });
 });
+
+
 
 $(document).on('click', '#listCars', function () {
     $('#content').load('listCars.html', function () {
