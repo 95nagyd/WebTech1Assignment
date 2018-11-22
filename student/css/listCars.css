@@ -5,8 +5,20 @@
     text-align: center;
 }
 
-.carList {
+.carTable {
     margin: auto;
     border-spacing: 0;
     padding-bottom: 20px;
+}
+
+.carTableColumnNames {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.carTableColumnName {
+    padding: 6px;
+    border-bottom: double 2px white;
 }

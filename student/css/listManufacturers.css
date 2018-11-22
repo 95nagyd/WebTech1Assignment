@@ -5,7 +5,20 @@
     text-align: center;
 }
 
-.manufacturerList {
+.manufacturerTable {
     margin: auto;
-    border-spacing: 0
+    border-spacing: 0;
+    padding-bottom: 20px;
+}
+
+.manufacturerTableColumnNames {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.manufacturerTableColumnName {
+    padding: 6px;
+    border-bottom: double 2px white;
 }
