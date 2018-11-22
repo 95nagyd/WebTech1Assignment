@@ -28,8 +28,8 @@ var cars = [
         "consumption":"10l/100km",
         "color":"gold",
         "manufacturer":"Opel",
-        "year":1996,
         "available":1,
+        "year":1996,
         "horsepower":50
     },
     {
