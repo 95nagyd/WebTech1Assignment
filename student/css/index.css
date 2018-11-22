@@ -9,10 +9,11 @@ body {
 }
 
 .webpage {
-    background: url("../images/carBackground.jpg") no-repeat center fixed;
+    background: url("../images/background.jpg") no-repeat center fixed;
     background-size: cover;
     min-height: 100%;
 }
+
 .text {
     margin-left: 3%;
     margin-top: 3%;
