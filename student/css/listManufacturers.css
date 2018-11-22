@@ -1,0 +1,11 @@
+.manufacturersTitle {
+    display: block;
+    position: center;
+    font-size: 28px;
+    text-align: center;
+}
+
+.manufacturerList {
+    margin: auto;
+    border-spacing: 0
+}

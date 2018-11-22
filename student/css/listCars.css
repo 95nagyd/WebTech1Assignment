@@ -1,0 +1,11 @@
+.carsTitle {
+    display: block;
+    position: center;
+    font-size: 28px;
+    text-align: center;
+}
+
+.carList {
+    margin: auto;
+    border-spacing: 0
+}
