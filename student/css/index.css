@@ -1,6 +1,7 @@
 html,webpage,body {
     min-height: 100% !important;
     height: 100%;
+    color: white;
 }
 body {
     margin: 0;
@@ -8,18 +9,14 @@ body {
 }
 
 .webpage {
-    background: url("../images/carBackground.jpg") no-repeat center center fixed;
+    background: url("../images/carBackground.jpg") no-repeat center fixed;
     background-size: cover;
-    height: 100%;
-    overflow: hidden;
-}
-.content {
-    margin-left: 3%;
-    margin-top: 3%;
+    min-height: 100%;
 }
 .text {
+    margin-left: 3%;
+    margin-top: 3%;
     font-family: Arial;
-    color: white;
     text-align: center;
 }
 
