@@ -21,7 +21,7 @@ $(document).on('click', '#listCars', function () {
 
 $(document).on('click', '#listManufacturers', function () {
     $('#content').load('listManufacturers.html', function () {
-        window.alert('listManufacturerTest');
+        listManufacturers();
     });
 });
 
