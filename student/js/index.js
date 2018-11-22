@@ -26,7 +26,14 @@ $(document).on('click', '#listManufacturers', function () {
 });
 
 $(document).on('click', '#addCar', function () {
-    $('#content').load('addNewCar.html');
+    $('#content').load('addNewCar.html',function () {
+        $.get('/manufacturerNames', function (manufacturerData) {
+            $.each(manufacturerData, function (idx, value) {
+                let opt = $('<option value="'+value+'">'+value+'</option>');
+                $('#manufacturer').append(opt);
+            });
+        });
+    });
 });
 
 $(document).on('click', '#addManufacturer', function () {
