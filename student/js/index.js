@@ -15,13 +15,13 @@ $(document).on('click', '#home', function () {
 
 $(document).on('click', '#listCars', function () {
     $('#content').load('listCars.html', function () {
-        listCars();
+        listCarsjQuery();
     });
 });
 
 $(document).on('click', '#listManufacturers', function () {
     $('#content').load('listManufacturers.html', function () {
-        listManufacturers();
+        listManufacturersAjax();
     });
 });
 
