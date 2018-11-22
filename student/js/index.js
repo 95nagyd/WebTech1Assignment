@@ -16,12 +16,14 @@ $(document).on('click', '#home', function () {
 $(document).on('click', '#listCars', function () {
     $('#content').load('listCars.html', function () {
         listCarsjQuery();
+        changeBackground('url(../images/backgroundcar.jpg) no-repeat center fixed');
     });
 });
 
 $(document).on('click', '#listManufacturers', function () {
     $('#content').load('listManufacturers.html', function () {
         listManufacturersAjax();
+        changeBackground('url(../images/backgroundmanufacturer.jpg) no-repeat center fixed');
     });
 });
 
@@ -33,13 +35,20 @@ $(document).on('click', '#addCar', function () {
                 $('#manufacturer').append(opt);
             });
         });
+        changeBackground('url(../images/backgroundcar.jpg) no-repeat center fixed');
     });
 });
 
 $(document).on('click', '#addManufacturer', function () {
     $('#content').load('addNewManufacturer.html');
+    changeBackground('url(../images/backgroundmanufacturer.jpg) no-repeat center fixed');
 });
 
+function changeBackground(url) {
+    $('.webpage').css('background', url);
+    $('.webpage').css('background-size', 'cover');
+    $('.webpage').css('min-height', '100%');
+}
 
 function addRowToTable(value, resultTable) {
     let row = $('<tr class="resultTableRow"></tr>');
