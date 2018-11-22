@@ -11,7 +11,7 @@ function listCars() {
             });
         },
         error: function() {
-            window.alert('Could not load any car.');
+            window.alert('Could not load cars.');
         }
     });
 }
