@@ -2,7 +2,7 @@
     <span class="addFormTitle">
         <p>Add New Car</p>
     </span>
-    <form class="formCar" id="formCar">
+    <form id="formCar">
         <div class="formInput">
             <label class="formLabel" for="name">Name:</label>
             <input type="text" id="name" placeholder="example: Civic" name="name">
@@ -32,7 +32,7 @@
             <input type="number" id="horsepower" placeholder="example: 150" name="horsepower">
         </div>
         <div class="formButtonCar">
-            <button type="button" value="submit" onclick="window.alert('addcar')">Add</button>
+            <button type="button" value="submit" onclick="postCar()">Add</button>
         </div>
     </form>
 </div>
