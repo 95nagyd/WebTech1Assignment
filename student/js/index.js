@@ -25,6 +25,15 @@ $(document).on('click', '#listManufacturers', function () {
     });
 });
 
+$(document).on('click', '#addCar', function () {
+    $('#content').load('addNewCar.html');
+});
+
+$(document).on('click', '#addManufacturer', function () {
+    $('#content').load('addNewManufacturer.html');
+});
+
+
 function addRowToTable(value, resultTable) {
     let row = $('<tr class="resultTableRow"></tr>');
     let cell;
