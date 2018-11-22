@@ -7,17 +7,15 @@ $(document).on('click', '#home', function () {
             document.write(file);
             document.close();
         },
-        error: function(file) {
+        error: function() {
             window.alert('failed to load index.html');
         }
     });
 });
 
-
-
 $(document).on('click', '#listCars', function () {
     $('#content').load('listCars.html', function () {
-        window.alert('listCarTest');
+        listCars();
     });
 });
 
@@ -26,3 +24,19 @@ $(document).on('click', '#listManufacturers', function () {
         window.alert('listManufacturerTest');
     });
 });
+
+function addRowToTable(value, resultTable) {
+    let row = $('<tr class="resultTableRow"></tr>');
+    let cell;
+    for (let columnName in value) {
+        if (value.hasOwnProperty(columnName)) {
+            if(columnName == "consumption"){
+                cell = $('<td class="resultTableRowCellConsumption">'+value[columnName]+'</td>');
+            }else{
+                cell = $('<td class="resultTableRowCell">'+value[columnName]+'</td>');
+            }
+            row.append(cell);
+        }
+    }
+    resultTable.append(row);
+}
