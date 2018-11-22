@@ -1,0 +1,85 @@
+html,webpage,body {
+    min-height: 100% !important;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.webpage {
+    background: url("../images/carBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+.content {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.text {
+    font-family: Arial;
+    color: white;
+    text-align: center;
+}
+
+.menuBar {
+    font-size: 20px;
+    font-family: Consolas;
+    background: darkgray;
+}
+
+
+.menuBar .menuBarList {
+    margin: 0;
+    padding: 0;
+}
+
+.menuBar .menuBarList .menuBarListElement {
+    display: inline-block;
+    position: relative;
+}
+
+.menuBar .menuBarList .menuBarListElement a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.menuBar .menuBarList .menuBarListElement:hover {
+    background: lightgray;
+}
+
+.menuBar .menuBarList .navbar-title {
+    display: inline-block;
+    position: relative;
+}
+.menuBar .menuBarList .navbar-title a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.menuBarList .menuBarListElementDropList {
+    position: absolute;
+    font-size: 16px;
+    min-width: 200px;
+    background: lightgray;
+    display: none;
+}
+
+.menuBarList .menuBarListElementDropList .menuBarListElementDropListElement {
+    margin-left: -40px;
+    display: block;
+    background: darkgray;
+}
+
+.menuBarList .menuBarListElement:hover .menuBarListElementDropList {
+    display: block;
+}
+
+.menuBarList .menuBarListElementDropList .menuBarListElementDropListElement:hover {
+    background: lightgray;
+}
