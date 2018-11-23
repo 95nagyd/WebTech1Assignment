@@ -1,16 +1,17 @@
 $(document).on('click', '#home', function () {
     let url = '/';
-    $.ajax(url, {
-        type: 'GET',
-        success: function (file) {
-            document.open("text/html",'self');
-            document.write(file);
-            document.close();
-        },
-        error: function() {
-            window.alert('failed to load index.html');
-        }
-    });
+    open("/", "_self");
+    // $.ajax(url, {
+    //     type: 'GET',
+    //     success: function (file) {
+    //         document.open("text/html",'self');
+    //         document.write(file);
+    //         document.close();
+    //     },
+    //     error: function() {
+    //         window.alert('failed to load index.html');
+    //     }
+    // });
 });
 
 $(document).on('click', '#listCars', function () {
