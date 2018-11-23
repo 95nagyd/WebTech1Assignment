@@ -45,22 +45,32 @@ $(document).on('click', '#addManufacturer', function () {
 });
 
 function changeBackground(url) {
-    $('.webpage').css('background', url);
-    $('.webpage').css('background-size', 'cover');
-    $('.webpage').css('min-height', '100%');
+    let webpage = $('.webpage');
+    webpage.css('background', url);
+    webpage.css('background-size', 'cover');
+    webpage.css('min-height', '100%');
 }
 
 function addRowToTable(value, resultTable) {
     let row = $('<tr class="resultTableRow"></tr>');
     let cell;
-    for (let columnName in value) {
-        if (value.hasOwnProperty(columnName)) {
-            if(columnName == "consumption"){
-                cell = $('<td class="resultTableRowCellConsumption">'+value[columnName]+'</td>');
-            }else{
-                cell = $('<td class="resultTableRowCell">'+value[columnName]+'</td>');
+    if (resultTable[0].id==='carTable'){
+        for (let columnName in value) {
+            if (value.hasOwnProperty(columnName)) {
+                if(columnName === "consumption"){
+                    cell = $('<td class="resultTableRowCellConsumption">'+value[columnName]+'</td>');
+                }else{
+                    cell = $('<td class="resultTableRowCell">'+value[columnName]+'</td>');
+                }
+                row.append(cell);
             }
-            row.append(cell);
+        }
+    }else {
+        for (let columnName in value) {
+            if (value.hasOwnProperty(columnName)) {
+                cell = $('<td class="resultTableRowCell" onclick="carsByManufacturer('+"'"+value.name+"'"+')">'+value[columnName]+'</td>');
+                row.append(cell);
+            }
         }
     }
     resultTable.append(row);
