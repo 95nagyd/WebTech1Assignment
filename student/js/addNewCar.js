@@ -20,7 +20,7 @@ function postCar() {
         success: function () {
             window.alert('Car (' + car.name + ') has been added to the database.');
             $('#content').load('listCars.html', function () {
-                listCarsAjax();
+                listCarsjQuery();
             });
         },
         error: function () {
