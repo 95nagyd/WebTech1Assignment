@@ -1,5 +1,19 @@
 function createManufacturerObject() {
     const formManufacturer = document.getElementById('formManufacturer');
+
+    if(!formManufacturer.name.value){
+        window.alert('Name is required!');
+        return;
+    }
+    if(!formManufacturer.country.value){
+        window.alert('Country is required!');
+        return;
+    }
+    if(!formManufacturer.founded.value){
+        window.alert('Date of foundation is required!');
+        return;
+    }
+
     let manufacturer = {};
     manufacturer.name = formManufacturer.name.value;
     manufacturer.country = formManufacturer.country.value;
