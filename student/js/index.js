@@ -15,7 +15,7 @@ $(document).on('click', '#home', function () {
 
 $(document).on('click', '#listCars', function () {
     $('#content').load('listCars.html', function () {
-        listCarsjQuery();
+        listCarsAjax(false);
         changeBackground('url(../images/backgroundcar.jpg) no-repeat center fixed');
     });
 });
