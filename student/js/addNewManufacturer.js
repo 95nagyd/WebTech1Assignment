@@ -5,7 +5,7 @@ function createManufacturerObject() {
     manufacturer.country = formManufacturer.country.value;
     let date = new Date(formManufacturer.founded.value);
     const opts = {year: 'numeric', month: 'numeric', day: 'numeric'};
-    manufacturer.founded = date.toLocaleDateString("hu-HU", opts);
+    manufacturer.founded = date.toLocaleDateString("en-US", opts);
     return manufacturer;
 }
 
